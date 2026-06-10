@@ -1697,6 +1697,23 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   });
 });
 </script>
-
+<button class="theme-toggle-btn" id="themeToggle">☀️ Day Mode</button>
+  <script>
+  const toggleBtn = document.getElementById('themeToggle');
+  
+  toggleBtn.addEventListener('click', () => {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    
+    if (currentTheme === 'light') {
+      // Switch to Dark/Night Mode
+      document.documentElement.removeAttribute('data-theme');
+      toggleBtn.innerHTML = '☀️ Day Mode';
+    } else {
+      // Switch to Light/Day Mode
+      document.documentElement.setAttribute('data-theme', 'light');
+      toggleBtn.innerHTML = '🌙 Night Mode';
+    }
+  });
+</script>
 </body>
 </html>
