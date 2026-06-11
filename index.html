@@ -61,6 +61,25 @@
       /* Day Mode Visibility Overrides */
       h1, h2, h3, h4, h5, h6, .hero-title, .section-title, .card-title, .feature-title {
         color: #212529 !important;
+      /* Light Mode Component Overrides */
+    [data-theme="light"] .gauge-dashboard {
+      background: #ffffff;
+      border: 1px solid rgba(0,0,0,0.08);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+    }
+    [data-theme="light"] .gauge-dashboard-label {
+      color: var(--text-secondary);
+    }
+    [data-theme="light"] .btn-filled,
+    [data-theme="light"] .btn-cta {
+      background: var(--teal);
+      color: #ffffff;
+    }
+    [data-theme="light"] .btn-filled:hover,
+    [data-theme="light"] .btn-cta:hover {
+      background: #355f9e;
+      box-shadow: 0 4px 16px rgba(64,117,196,0.35);
+    }
       }
 
       nav, .navbar, header, .nav-container, .scrolled {
